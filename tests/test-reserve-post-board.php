@@ -138,7 +138,7 @@ class Reserve_Post_Board_Test extends WP_UnitTestCase {
 		$i = 0;
 
 		foreach ( $ul->getElementsByTagname( 'li' ) as $li ) {
-			$this->assertEquals( 3, count( $li->getElementsByTagName( 'span' ) ) );
+			$this->assertEquals( 3, $li->getElementsByTagName( 'span' )->length );
 			$spans = $li->getElementsByTagName( 'span' );
 
 			$this->assertNotFalse( strpos( $spans[0]->getAttribute( 'class' ), 'rpb_date' ) );
